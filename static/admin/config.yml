@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tikhonov-dv/gatsby-blog-test
+  repo: neuromation/platform-blog
 
 media_folder: static/assets
 public_folder: ../../assets
