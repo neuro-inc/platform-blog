@@ -31,7 +31,7 @@ class Layout extends React.Component {
             style={{
               marginLeft: 'auto',
               marginRight: 'auto',
-              maxWidth: rhythm(32)
+              maxWidth: rhythm(33)
             }}
           >
             <main
