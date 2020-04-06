@@ -24,13 +24,13 @@ module.exports = {
         name: `blog`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/content/assets`,
-    //     name: `assets`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: `assets`,
+      },
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
