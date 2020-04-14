@@ -49,7 +49,7 @@ const HeaderInner = styled.div`
 const Logo = styled(Link)`
   display: inline-block;
   width: 134px;
-  height: 27px;
+  height: 30px;
   background-image: url(${LogoImg});
   background-repeat: no-repeat;
   background-position: center;
