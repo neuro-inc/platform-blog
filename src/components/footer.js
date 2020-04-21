@@ -19,9 +19,9 @@ export default function Footer () {
         </ColLeft>
         <Menu />
         <div>
-          <NavItem href=''>Log in</NavItem>
+          <NavItem href='https://app.neu.ro/login'>Log in</NavItem>
           <Sep>|</Sep>
-          <NavItem href=''>Sign Un</NavItem>
+          <NavItem href='https://app.neu.ro/signup'>Sign Up</NavItem>
         </div>
       </FooterContent>
     </FooterWrap>

@@ -14,9 +14,9 @@ export default function Header () {
 
         <Menu />
         <AuthWrap>
-          <Link to=''>Log in</Link>
+          <a href='https://app.neu.ro/login'>Log in</a>
           <span>|</span>
-          <Link to=''>Sign Up</Link>
+          <a href='https://app.neu.ro/signup'>Sign Up</a>
         </AuthWrap>
       </HeaderInner>
     </HeaderWrap>

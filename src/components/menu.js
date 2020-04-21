@@ -8,7 +8,7 @@ export default function Menu () {
       <NavItem href='https://neu.ro/consulting'>Solutions</NavItem>
       <NavItem href='https://neu.ro/pricing'>Pricing</NavItem>
       <NavItem className='active' href='/'>Blog</NavItem>
-      <NavItem href='https://neu.ro/docs'>Docs</NavItem>
+      <NavItem href='https://docs.neu.ro/'>Docs</NavItem>
     </Navigation>
   )
 }
