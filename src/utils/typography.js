@@ -16,8 +16,8 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: '16px',
   baseLineHeight: 1.666,
-  headerFontFamily: ['Roboto', 'serif'],
-  bodyFontFamily: ['Roboto', 'serif']
+  headerFontFamily: ['Roboto', 'sans-serif'],
+  bodyFontFamily: ['Roboto', 'sans-serif']
   // See below for the full list of options.
 })
 
