@@ -6,6 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
+import styled from 'styled-components'
 
 class BlogPostTemplate extends React.Component {
   render () {
@@ -19,23 +20,26 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1)
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1)
-          }}
-        />
+        <PostWrap>
+          <h1>{post.frontmatter.title}</h1>
+          <p
+            style={{
+              ...scale(-1 / 5),
+              display: 'block',
+              marginBottom: rhythm(0.5),
+              marginTop: rhythm(-1)
+            }}
+          >
+            {post.frontmatter.date}
+          </p>
+          <hr
+            style={{
+              marginBottom: rhythm(1)
+            }}
+          />
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </PostWrap>
+        
         {/*<Bio /> */}
 
         <ul
@@ -67,6 +71,14 @@ class BlogPostTemplate extends React.Component {
     )
   }
 }
+
+const PostWrap = styled.div`
+  border-radius: 20px; 
+  background: #ededed;
+  box-shadow: -7px -7px 10px #fff,5px 5px 8px rgba(0,0,0,.2);
+  padding: 30px;
+  margin-bottom: 40px;
+`
 
 export default BlogPostTemplate
 

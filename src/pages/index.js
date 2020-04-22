@@ -47,15 +47,11 @@ class Index extends React.Component {
 }
 
 const PostItem = styled.div`
-  /* border-radius: 30px; 
+  border-radius: 20px; 
   background: #ededed;
   box-shadow: -7px -7px 10px #fff,5px 5px 8px rgba(0,0,0,.2);
   padding: 30px;
-  margin-bottom: 40px; */
-
-  padding: 0 0 20px 0; 
-  margin: 0 0 30px 0;
-  border-bottom: 1px solid #dad9d9;
+  margin-bottom: 40px;
 `
 
 const PostTitle = styled.h3`
