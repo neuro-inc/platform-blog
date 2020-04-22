@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `neu.ro`,
+    title: `Neu.ro`,
     author: `https://neu.ro/`,
     description: `https://neu.ro/ blog.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
