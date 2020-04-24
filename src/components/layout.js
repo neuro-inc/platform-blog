@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     font-size: 18px;
   }
+  ul, li {
+    font-weight: 300;
+  }
 `
 
 class Layout extends React.Component {
