@@ -108,7 +108,7 @@ When using 2 instances for training, the average time required for one epoch doe
 | 2               | 171.93                       |
 | 4               | 138.80                       |
 
-Now let's evaluate Distributed Training when data preprocessing is required. In our case, the data is[Google's Natural Questions](https://ai.google.com/research/NaturalQuestions/dataset)with several augmentations performed on the fly.
+Now let's evaluate Distributed Training when data preprocessing is required. In our case, the data is [Google's Natural Questions](https://ai.google.com/research/NaturalQuestions/dataset) with several augmentations performed on the fly.
 
 As you can see in the table, the acceleration is more significant, because in this case we are allocating more CPU resources for preprocessing.
 
