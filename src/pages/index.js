@@ -54,12 +54,17 @@ const PostItem = styled.div`
 const PostTitle = styled.h3`
   margin: 0 0 20px 0;
   font-size: 36px;
+  line-height: 1.3;
   a {
     color: #3d3d3d;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @media only screen and (max-width: 480px){
+    font-size: 28px;
   }
 `
 

@@ -21,7 +21,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <PostWrap>
-          <h1>{post.frontmatter.title}</h1>
+          <PostTitle>{post.frontmatter.title}</PostTitle>
           <p
             style={{
               ...scale(-1 / 5),
@@ -78,6 +78,16 @@ const PostWrap = styled.div`
   box-shadow: -7px -7px 10px #fff,5px 5px 8px rgba(0,0,0,.2);
   padding: 30px;
   margin-bottom: 40px;
+`
+
+const PostTitle = styled.h1`
+  margin: 0 0 30px 0;
+  font-size: 36px;
+  line-height: 1.3;
+
+  @media only screen and (max-width: 480px){
+    font-size: 28px;
+  }
 `
 
 export default BlogPostTemplate
