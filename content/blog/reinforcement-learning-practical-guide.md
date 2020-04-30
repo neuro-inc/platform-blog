@@ -24,7 +24,7 @@ To simplify your exploration of RL, we created an [ML recipe](https://docs.neu.r
 
 There are two ways to run the recipe:
 
-* [Click here](https://apps.neu.ro/mountain-car) to start a Jupyter Notebook session (or click the corresponding button on your [Dashboard](https://app.neu.ro/)). Note that as soon as you terminate the Jupyter session, your changes are lost.
+* [Click here](https://apps.neu.ro/ml-recipes/mountain-car) to start a Jupyter Notebook session (or click the corresponding button on your [Dashboard](https://app.neu.ro/)). Note that as soon as you terminate the Jupyter session, your changes are lost.
 * Follow the [instructions](https://docs.neu.ro/cookbook/deep-q-learning-dqn#quick-start) to clone the repository and preserve your changes on Neu.ro storage. Use `make download` to download the changes in your local copy of the repository.
 
 Good luck in learning RL with Neu.ro, and don’t hesitate to give us your [feedback](mailto:team@neu.ro)!
