@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Menu from '../menu'
-import { Link } from 'gatsby'
-
 import headerBg from '../../../static/assets/HeaderNeo.jpg'
 import LogoImg from '../../../static/assets/Logo.svg'
 import { MobileNav } from './containers/MobileNav'
@@ -25,7 +23,7 @@ export function Header () {
       />
       <HeaderWrap>
         <HeaderInner>
-          <Logo to='' />
+          <Logo href='https://neu.ro/' />
           <MenuWrap>
             <Menu />
           </MenuWrap>
@@ -68,7 +66,7 @@ const HeaderInner = styled.div`
   min-height: 64px;
 `
 
-const Logo = styled(Link)`
+const Logo = styled.a`
   display: inline-block;
   width: 67px;
   height: 30px;
