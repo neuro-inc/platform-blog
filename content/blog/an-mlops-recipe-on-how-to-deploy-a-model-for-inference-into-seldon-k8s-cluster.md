@@ -13,4 +13,4 @@ See the vanilla mnist model deployed. The example features:
 3. Test inference on Neu.ro;
 4. Launch production inference on existing Seldon Core.
 
-[https://github.com/neuromation/neuro-examples/tree/master/mnist](https://github.com/neuromation/neuro-examples/tree/master/mnist)
+[How to deploy a model for inference into Seldon K8S cluster](https://github.com/neuromation/neuro-examples/tree/master/mnist)
