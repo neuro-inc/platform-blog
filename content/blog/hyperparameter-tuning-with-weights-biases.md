@@ -138,4 +138,6 @@ make kill-hypertrain-all
 
 After that, verify that the jobs stopped (`make ps`), and then delete unused sweeps from the local file `.wandb_sweeps`.
 
+You can see this guide in action in our [repository](https://github.com/neuromation/ml-recipe-hyperparam-wandb), where we apply hyperparemeter tuning with W&B to image classification task.
+
 Good luck in training your models on Neu.ro, and don’t hesitate to give us your [feedback](mailto:team@neu.ro)!
