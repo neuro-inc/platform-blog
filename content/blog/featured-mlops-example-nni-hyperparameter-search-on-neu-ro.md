@@ -7,4 +7,4 @@ description: >-
   Search on the Neu.ro platform. NNI toolkit is fully available through Neu.ro
   managed MLOps service. Let us install NNI for you.
 ---
-<br><iframe src="https://player.vimeo.com/video/417956858" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<br> <iframe src="https://player.vimeo.com/video/417956858" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
