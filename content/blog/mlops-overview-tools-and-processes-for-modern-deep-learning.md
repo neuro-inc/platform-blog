@@ -13,42 +13,45 @@ by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
 * A high-level overview of the deep learning pipelines and tools 
 * Discussion on what a training loop is, tools and approaches for implementing
 
-### An initial ML pipeline on neu.ro platform
+### Typical ML pipeline 
 
-1. [Collect and store raw data](#collect_raw_data)
-2. [Setup labeling process](#labeling)
+- Collect and store raw data
+- [Setup labeling process](#labeling)
 
    \- Done with labeling tools wrapped in a neu.ro job
-3. Write  scripts to store data on the storage in the correct format
-4. Analyze data
+- Write  scripts to store data on the storage in the correct format 
+- Analyze data
 
    \- Use jupyter notebook wrapped in neu.ro job
-5. Write and debug the code for training loop from scratch or import an existing solution
+- Write and debug the code for training loop from scratch or import an existing solution
 
-   \- Start a neu.ro a job and connect to it via IDE with remote interpreter to work on the code
-6. Train the model
+   \- Start a neu.ro a job, connect to it via IDE with remote interpreter to work on the code
+- Train the model
 
    \- Training can also be done with additional options like hyper parameters search and distributed training via neu.ro
-7. Serve the demo
+- Serve the demo
 
    \- Deploy the model as a neu.ro job with a simple Web UI
-8. Next steps
+- Next steps
 
    The following steps are very dependent on the project and may include model hosting and monitoring, triggers for retraining a model, data versioning etc.
 
-###### <a name="collect_raw_data"></a> Collect raw data
-
-This is a simple step if you are not building a continuous model retraining pipeline. Neu.ro lets you define storage either in terms of NFS or [Object Storage](https://docs.neu.ro/toolbox/accessing-object-storage-in-gcp) in the cloud of your choice.
-
-###### <a name="labeling"></a> Setup labeling 
+#### <a name="labeling"></a> Some Notes on Labeling 
 
 You can use crowdsourcing platforms for labeling, some of them have special tools for labeling. For example: 
 
-[Yandex Toloka](https://toloka.yandex.ru/)
-[Amazon Mechanical Turk](https://www.mturk.com/)
+[Yandex Toloka](https://toloka.yandex.ru/) [Amazon Mechanical Turk](https://www.mturk.com/)
 
 Another option is to start the labeling tool as a neu.ro job and serve independently hiring people directly. It can be useful if you work with secure data or want to optimize costs and quality directly. Neu.ro will be happy to set you up with an instance and get your process going through our remote MLOps service. Example tools: 
 
-[Scalabel](https://github.com/scalabel/scalabel)
-[LabelMe](http://labelme2.csail.mit.edu/Release3.0/index.php?message=1)
-[CVAT](https://github.com/opencv/cvat)
+[Scalabel](https://github.com/scalabel/scalabel) [LabelMe](http://labelme2.csail.mit.edu/Release3.0/index.php?message=1) [CVAT](https://github.com/opencv/cvat)
+
+####  Development Tools
+
+After labeling is done, data is processed and stored, it is time to start the development process.
+
+The main language for developing deep learning models is python. Other languages usually can be used for deploying pipelines into production.
+
+Initial data analysis can be done with useful python-based [jupyter notebook](https://jupyter.org/).
+
+The development of large code fragments is conveniently can be done in an IDE ([PyCharm](https://www.jetbrains.com/ru-ru/pycharm/), [Visual Studio Code](https://code.visualstudio.com/) and so on). Since the calculations are massive, usually the code is developed in the IDE locally, but it is runs remotely via a remote interpreter ([remote debugging](https://www.jetbrains.com/help/pycharm/remote-debugging-with-product.html)).
