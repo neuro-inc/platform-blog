@@ -1,23 +1,21 @@
 ---
 path: /tools-for-cutting-edge-deep-learning-mlops
 date: 2020-05-19T07:54:00.142Z
-title: 'MLOps Overview -- Tools and Processes For Modern Deep Learning  '
+title: 'MLOps Overview of Tools and Processes For Modern Deep Learning  '
 description: A description of the current MLOps toolkit and methods
 ---
 ## **TOOLS FOR MODERN DEEP LEARNING**
 
-##### by Aleksei Shabanov 
+##### by Aleksei Shabanov
 
 ##### aleksei.shabanov@neuromation.io
 
 ### Contents
 
 * A high-level overview of the deep learning pipelines and tools 
-*  Discussion on what a training loop is, tools and approaches for implementing
+* Discussion on what a training loop is, tools and approaches for implementing
 
-
-
-### How does an initial ML pipeline look on neu.ro platform?
+### An initial ML pipeline on neu.ro platform
 
 1. Collect raw data
 2. Setup labeling process
