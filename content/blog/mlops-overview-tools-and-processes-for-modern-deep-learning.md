@@ -4,7 +4,7 @@ date: 2020-05-19T07:54:00.142Z
 title: 'MLOps Overview of Tools and Processes For Modern Deep Learning  '
 description: A description of the current MLOps toolkit and methods
 ---
-## **TOOLS FOR MODERN DEEP LEARNING**
+###### **TOOLS FOR MODERN DEEP LEARNING**
 
 by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
 
@@ -15,8 +15,8 @@ by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
 
 ### An initial ML pipeline on neu.ro platform
 
-1. [Collect raw data](#collect_raw_data)
-2. Setup labeling process
+1. [Collect and store raw data](#collect_raw_data)
+2. [Setup labeling process](#labeling)
 
    \- Done with labeling tools wrapped in a neu.ro job
 3. Write  scripts to store data on the storage in the correct format
@@ -36,6 +36,19 @@ by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
 
    The following steps are very dependent on the project and may include model hosting and monitoring, triggers for retraining a model, data versioning etc.
 
+###### <a name="collect_raw_data"></a> Collect raw data
 
+This is a simple step if you are not building a continuous model retraining pipeline. Neu.ro lets you define storage either in terms of NFS or [Object Storage](https://docs.neu.ro/toolbox/accessing-object-storage-in-gcp) in the cloud of your choice.
 
-### <a name="collect_raw_data"></a> Collect raw data
+###### <a name="labeling"></a> Setup labeling 
+
+You can use crowdsourcing platforms for labeling, some of them have special tools for labeling. For example: 
+
+[Yandex Toloka](https://toloka.yandex.ru/)
+[Amazon Mechanical Turk](https://www.mturk.com/)
+
+Another option is to start the labeling tool as a neu.ro job and serve independently hiring people directly. It can be useful if you work with secure data or want to optimize costs and quality directly. Neu.ro will be happy to set you up with an instance and get your process going through our remote MLOps service. Example tools: 
+
+[Scalabel](https://github.com/scalabel/scalabel)
+[LabelMe](http://labelme2.csail.mit.edu/Release3.0/index.php?message=1)
+[CVAT](https://github.com/opencv/cvat)
