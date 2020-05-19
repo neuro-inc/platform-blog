@@ -6,9 +6,7 @@ description: A description of the current MLOps toolkit and methods
 ---
 ## **TOOLS FOR MODERN DEEP LEARNING**
 
-##### by Aleksei Shabanov
-
-##### aleksei.shabanov@neuromation.io
+by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
 
 ### Contents
 
@@ -17,7 +15,7 @@ description: A description of the current MLOps toolkit and methods
 
 ### An initial ML pipeline on neu.ro platform
 
-1. Collect raw data
+1. [Collect raw data](#collect_raw_data)
 2. Setup labeling process
 
    \- Done with labeling tools wrapped in a neu.ro job
@@ -37,3 +35,7 @@ description: A description of the current MLOps toolkit and methods
 8. Next steps
 
    The following steps are very dependent on the project and may include model hosting and monitoring, triggers for retraining a model, data versioning etc.
+
+
+
+### <a name="collect_raw_data"></a> Collect raw data
