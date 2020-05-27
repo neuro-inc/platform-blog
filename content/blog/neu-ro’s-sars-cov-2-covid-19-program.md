@@ -10,7 +10,7 @@ Neu.ro believes that machine learning is a powerful tool for the development of 
 
 Neur.o is supporting research and development of ML-driven solutions to SARS-CoV-2 / COVID-19 by providing the Neu.ro platform and GPU computing power, completely free of charge, to qualified engineers and researchers. 
 
-Interested? Please [Join us here!](https://neu.ro/pricing)
+Interested? Please [Join us here!](http://landing.neu.ro/offers/covid-19/#)
 
 ##### COVID-related research tracks and resources
 
