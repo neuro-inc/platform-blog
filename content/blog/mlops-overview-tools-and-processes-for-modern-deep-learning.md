@@ -13,30 +13,30 @@ by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
 * A high-level overview of the deep learning pipelines and tools 
 * Discussion on what a training loop is, tools and approaches for implementing
 
-### Typical ML pipeline 
+### Typical ML pipeline
 
-- Collect and store raw data
-- Setup labeling process
+* Collect and store raw data
+* Setup labeling process
 
-   \- Done with labeling tools wrapped in a neu.ro job
-- Write  scripts to store data on the storage in the correct format 
-- Analyze data
+  \- Done with labeling tools wrapped in a neu.ro job
+* Write  scripts to store data on the storage in the correct format 
+* Analyze data
 
-   \- Use jupyter notebook wrapped in neu.ro job
-- Write and debug the code for training loop from scratch or import an existing solution
+  \- Use jupyter notebook wrapped in neu.ro job
+* Write and debug the code for training loop from scratch or import an existing solution
 
-   \- Start a neu.ro a job, connect to it via IDE with remote interpreter to work on the code
-- Train the model
+  \- Start a neu.ro a job, connect to it via IDE with remote interpreter to work on the code
+* Train the model
 
-   \- Training can also be done with additional options like hyper parameters search and distributed training via neu.ro
-- Serve the demo
+  \- Training can also be done with additional options like hyper parameters search and distributed training via neu.ro
+* Serve the demo
 
-   \- Deploy the model as a neu.ro job with a simple Web UI
-- Next steps
+  \- Deploy the model as a neu.ro job with a simple Web UI
+* Next steps
 
    The following steps are very dependent on the project and may include model hosting and monitoring, triggers for retraining a model, data versioning etc.
 
-#### <a name="labeling"></a> Some Notes on Labeling 
+#### <a name="labeling"></a> Some Notes on Labeling
 
 You can use crowdsourcing platforms for labeling, some of them have special tools for labeling. For example: 
 
@@ -46,7 +46,7 @@ Another option is to start the labeling tool as a neu.ro job and serve independe
 
 [Scalabel](https://github.com/scalabel/scalabel) [LabelMe](http://labelme2.csail.mit.edu/Release3.0/index.php?message=1) [CVAT](https://github.com/opencv/cvat)
 
-####  Development Tools
+#### Development Tools
 
 After labeling is done, data is processed and stored, it is time to start the development process.
 
@@ -56,10 +56,10 @@ Initial data analysis can be done with useful python-based [jupyter notebook](ht
 
 The development of large code fragments is conveniently can be done in an IDE ([PyCharm](https://www.jetbrains.com/ru-ru/pycharm/), [Visual Studio Code](https://code.visualstudio.com/) and so on). Since the calculations are massive, usually the code is developed in the IDE locally, but it is runs remotely via a remote interpreter ([remote debugging](https://www.jetbrains.com/help/pycharm/remote-debugging-with-product.html)).
 
-####  Training the model (Training Loop)
+#### Training the model (Training Loop)
 
 A key element of model development is the model training. At the core of it is the training loop. 
 
 It is a process where the model receives labeled samples, backpropagation algorithm calculates the error and the gradients of the loss function are calculated, then the optimizer changes the model’s weight. This loop runs epoch after epoch, batch after batch, as a result we get the best state of the model in terms of best metric value on validation data.
 
-
+![mlops-model-training-loop](../../assets/model_training_loop.png "Model Training Loop (mlops)")
