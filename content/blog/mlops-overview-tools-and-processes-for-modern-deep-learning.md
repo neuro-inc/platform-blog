@@ -6,6 +6,8 @@ description: A description of the current MLOps toolkit and methods
 ---
 ![]()
 
+
+
 ###### **TOOLS FOR MODERN DEEP LEARNING**
 
 by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
@@ -116,3 +118,7 @@ Thus, the boundary between such tools can be very arbitrary.
 #### Loop Provider: MMDetection Pipeline
 
 ![ MMDetection-loop-provider-mlops](../../assets/mmdetection.png "MMDetection loop MLOps")
+
+#### Loop Provider: Transformers Library 
+
+![Transformers-loop-provider-mlops](../../assets/transformers.png "Transformers loop MLOps")
