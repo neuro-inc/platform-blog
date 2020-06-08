@@ -16,7 +16,7 @@ by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
 ### Typical ML pipeline 
 
 - Collect and store raw data
-- [Setup labeling process](#labeling)
+- Setup labeling process
 
    \- Done with labeling tools wrapped in a neu.ro job
 - Write  scripts to store data on the storage in the correct format 
@@ -55,3 +55,11 @@ The main language for developing deep learning models is python. Other languages
 Initial data analysis can be done with useful python-based [jupyter notebook](https://jupyter.org/).
 
 The development of large code fragments is conveniently can be done in an IDE ([PyCharm](https://www.jetbrains.com/ru-ru/pycharm/), [Visual Studio Code](https://code.visualstudio.com/) and so on). Since the calculations are massive, usually the code is developed in the IDE locally, but it is runs remotely via a remote interpreter ([remote debugging](https://www.jetbrains.com/help/pycharm/remote-debugging-with-product.html)).
+
+####  Training the model (Training Loop)
+
+A key element of model development is the model training. At the core of it is the training loop. 
+
+It is a process where the model receives labeled samples, backpropagation algorithm calculates the error and the gradients of the loss function are calculated, then the optimizer changes the model’s weight. This loop runs epoch after epoch, batch after batch, as a result we get the best state of the model in terms of best metric value on validation data.
+
+
