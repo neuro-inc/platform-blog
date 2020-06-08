@@ -63,3 +63,16 @@ A key element of model development is the model training. At the core of it is t
 It is a process where the model receives labeled samples, backpropagation algorithm calculates the error and the gradients of the loss function are calculated, then the optimizer changes the model’s weight. This loop runs epoch after epoch, batch after batch, as a result we get the best state of the model in terms of best metric value on validation data.
 
 ![mlops-model-training-loop](../../assets/model_training_loop.png "Model Training Loop (mlops)")
+
+#### Training Loop Providers
+
+Since the training loop has several repeating parts (such as feeding model data, calculating the loss function, its gradients and metrics, doing an optimizer step) we can write this loop once in an abstract form  and allow the user to insert their own logic where necessary via callbacks mechanic.
+
+A callback is a procedure that starts at a certain point. For example:
+
+- a callback that saves the state of a model is executed at the end of an epoch
+
+- a callback that logs metrics values is executed after each data batch
+
+We name the library that provides such an abstract loop -- the loop provider.
+
