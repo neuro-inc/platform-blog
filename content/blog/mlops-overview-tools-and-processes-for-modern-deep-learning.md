@@ -80,3 +80,7 @@ Lets look at several examples of Training Loop Providers:
 #### Loop Provider: Catalyst
 
 ![catalyst-loop-provider-mlops](../../assets/catalyst.png "Catalys loop MLOps")
+
+#### Loop Provider: Keras
+
+![keras-loop-provider-mlops](../../assets/keras.png "Keras loop MLOps")
