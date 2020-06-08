@@ -70,9 +70,13 @@ Since the training loop has several repeating parts (such as feeding model data,
 
 A callback is a procedure that starts at a certain point. For example:
 
-- a callback that saves the state of a model is executed at the end of an epoch
-
-- a callback that logs metrics values is executed after each data batch
+* a callback that saves the state of a model is executed at the end of an epoch
+* a callback that logs metrics values is executed after each data batch
 
 We name the library that provides such an abstract loop -- the loop provider.
 
+Lets look at several examples of Training Loop Providers:
+
+#### Loop Provider: Catalyst
+
+![catalyst-loop-provider-mlops](../../assets/catalyst.png "Catalys loop MLOps")
