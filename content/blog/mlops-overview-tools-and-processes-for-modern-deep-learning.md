@@ -4,7 +4,7 @@ date: 2020-05-19T07:54:00.142Z
 title: 'MLOps Overview of Tools and Processes For Modern Deep Learning  '
 description: A description of the current MLOps toolkit and methods
 ---
-
+![]()
 
 ###### **TOOLS FOR MODERN DEEP LEARNING**
 
@@ -81,7 +81,7 @@ Lets look at several examples of Training Loop Providers:
 
 #### Loop Provider: Catalyst
 
-![catalyst-loop-provider-mlops](../../assets/catalyst.png "Catalys loop MLOps")
+![catalyst-loop-provider-mlops](../../assets/catalyst.png "Catalyst loop MLOps")
 
 #### Loop Provider: Keras
 
@@ -89,13 +89,12 @@ Lets look at several examples of Training Loop Providers:
 
 #### Can there be a “Universal” training loop?
 
-Why don't we write such a loop once and for all, and not think about it anymore?
-Unfortunately, different deep learning tasks may have different loop structures. For example:
+Why don't we write such a loop once and for all, and not think about it anymore? Unfortunately, different deep learning tasks may have different loop structures. For example:
 
-- There are [GAN’s](https://en.wikipedia.org/wiki/Generative_adversarial_network) including with two (sometimes more) models with different loops for each of them, additionally, we may want to change discriminators weights less often then generated ones
-- There are tasks when we start training process with one optimizer, but then we want to change it
-- Model may include several parts (2-stage detectors) or several “heads” (outputs)
-- There is [unsupervised learning](https://en.wikipedia.org/wiki/Unsupervised_learning) component without ground truth labels
+* There are [GAN’s](https://en.wikipedia.org/wiki/Generative_adversarial_network) including with two (sometimes more) models with different loops for each of them, additionally, we may want to change discriminators weights less often then generated ones
+* There are tasks when we start training process with one optimizer, but then we want to change it
+* Model may include several parts (2-stage detectors) or several “heads” (outputs)
+* There is [unsupervised learning](https://en.wikipedia.org/wiki/Unsupervised_learning) component without ground truth labels
 
 Because of variety of approaches, the loop that is abstract enough to address all of them will also be impossibly cumbersome. It is more practical to have a set of out of the box functions for working in a specific application area of deep learning area (object detection, text processing, classical tables tasks)
 
@@ -103,13 +102,17 @@ We will call such tools a domain loop providers.
 
 #### Domain loop providers
 
-So, besides the general tools that we mentioned (keras, catalyst, fastai), there are some special tools:
+So, besides the general tools that we mentioned (keras, catalyst, fastai), there are some specialist loop providers:
 
-- [mmdetection](https://github.com/open-mmlab/mmdetection) — for object detection and segmentation
-- [transformers](https://github.com/huggingface/transformers) — for texts processing
-- [open-reid](https://github.com/Cysu/open-reid) — for solving person reidentification task
-- [keras-GAN](https://github.com/eriklindernoren/Keras-GAN) — for training GANs
+* [mmdetection](https://github.com/open-mmlab/mmdetection) — for object detection and segmentation
+* [transformers](https://github.com/huggingface/transformers) — for texts processing
+* [open-reid](https://github.com/Cysu/open-reid) — for solving person reidentification task
+* [keras-GAN](https://github.com/eriklindernoren/Keras-GAN) — for training GANs
 
-But “general” loop providers also tries to support specialized cases and create submodules such as [torchtext](https://pytorch.org/text/),  [catalyst.RL] (https://github.com/catalyst-team/catalyst-rl), [catalyst.GAN](https://github.com/catalyst-team/catalyst-rl) and so on. Thus, the boundary between such tools can be very arbitrary.
+But “general” loop providers also try to support specialized cases and create submodules such as [torchtext](https://pytorch.org/text/),  [catalyst.RL](https://github.com/catalyst-team/catalyst-rl), [catalyst.GAN](https://github.com/catalyst-team/catalyst-rl) and so on. 
 
+Thus, the boundary between such tools can be very arbitrary.
 
+#### Loop Provider: MMDetection Pipeline
+
+![ MMDetection-loop-provider-mlops](../../assets/mmdetection.png "MMDetection loop MLOps")
