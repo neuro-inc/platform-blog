@@ -4,6 +4,8 @@ date: 2020-05-19T07:54:00.142Z
 title: 'MLOps Overview of Tools and Processes For Modern Deep Learning  '
 description: A description of the current MLOps toolkit and methods
 ---
+
+
 ###### **TOOLS FOR MODERN DEEP LEARNING**
 
 by [Aleksei Shabanov](emailto:aleksei.shabanov@neuromation.io)
@@ -84,3 +86,17 @@ Lets look at several examples of Training Loop Providers:
 #### Loop Provider: Keras
 
 ![keras-loop-provider-mlops](../../assets/keras.png "Keras loop MLOps")
+
+#### Can there be a “Universal” training loop?
+
+Why don't we write such a loop once and for all, and not think about it anymore?
+Unfortunately, different deep learning tasks may have different loop structures. For example:
+
+- There are [GAN’s](https://en.wikipedia.org/wiki/Generative_adversarial_network) including with two (sometimes more) models with different loops for each of them, additionally, we may want to change discriminators weights less often then generated ones
+- There are tasks when we start training process with one optimizer, but then we want to change it
+- Model may include several parts (2-stage detectors) or several “heads” (outputs)
+- There is unsupervised learning component without ground truth labels
+
+Because of variety of approaches, the loop that is abstract enough to address all of them will also be impossibly cumbersome. It is more practical to have a set of out of the box functions for working in a specific application area of deep learning area (object detection, text processing, classical tables tasks)
+
+We will call such tools a domain loop providers.
