@@ -95,8 +95,21 @@ Unfortunately, different deep learning tasks may have different loop structures.
 - There are [GAN’s](https://en.wikipedia.org/wiki/Generative_adversarial_network) including with two (sometimes more) models with different loops for each of them, additionally, we may want to change discriminators weights less often then generated ones
 - There are tasks when we start training process with one optimizer, but then we want to change it
 - Model may include several parts (2-stage detectors) or several “heads” (outputs)
-- There is unsupervised learning component without ground truth labels
+- There is [unsupervised learning](https://en.wikipedia.org/wiki/Unsupervised_learning) component without ground truth labels
 
 Because of variety of approaches, the loop that is abstract enough to address all of them will also be impossibly cumbersome. It is more practical to have a set of out of the box functions for working in a specific application area of deep learning area (object detection, text processing, classical tables tasks)
 
 We will call such tools a domain loop providers.
+
+#### Domain loop providers
+
+So, besides the general tools that we mentioned (keras, catalyst, fastai), there are some special tools:
+
+- [mmdetection](https://github.com/open-mmlab/mmdetection) — for object detection and segmentation
+- [transformers](https://github.com/huggingface/transformers) — for texts processing
+- [open-reid](https://github.com/Cysu/open-reid) — for solving person reidentification task
+- [keras-GAN](https://github.com/eriklindernoren/Keras-GAN) — for training GANs
+
+But “general” loop providers also tries to support specialized cases and create submodules such as [torchtext](https://pytorch.org/text/),  [catalyst.RL] (https://github.com/catalyst-team/catalyst-rl), [catalyst.GAN](https://github.com/catalyst-team/catalyst-rl) and so on. Thus, the boundary between such tools can be very arbitrary.
+
+
