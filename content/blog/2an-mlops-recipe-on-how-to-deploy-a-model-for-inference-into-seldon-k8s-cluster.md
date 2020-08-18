@@ -1,18 +1,9 @@
 ---
-path: /seldon-on-neuro-mlops2
+path: /running-any-code-out-of-git-in-5min-mlops
 date: 2020-08-18T16:57:33.995Z
-title: >-
-  2An MLOps recipe on how to deploy a model for inference into Seldon K8S
-  cluster
-description: 2An MLOps recipe on how to deploy inference into Seldon K8S cluster
+title: Deploying a code base out of git into a live project in 5 min! Get to work!
+description: >-
+  Demo of how to instantiate a project out of git and run it on neu.ro in
+  minutes.
 ---
-Here is a quick example from our engineering team on how to deploy a model into Seldon. It is one of the better tools for placing your inference into a K8S cluster. Best of all [Seldon](https://www.seldon.io/tech/products/core/) is open-sourced, and this means it is free! Neu.ro team can help you set up and maintain your K8S cluster for Seldon.
-
-See the vanilla mnist model deployed. The example features:
-
-1. Prepare and train a basic model on Neu.ro;
-2. Wrap the model into an inference HTTP server;
-3. Test inference on Neu.ro;
-4. Launch production inference on existing Seldon Core.
-
-[How to deploy a model for inference into Seldon K8S cluster](https://github.com/neuromation/neuro-examples/tree/master/mnist)
+<iframe src="https://player.vimeo.com/video/448646113" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
